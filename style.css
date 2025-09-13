@@ -13,38 +13,38 @@ body {
 }
 
 .dropdown-menu {
-    width: 500px;
-    padding: 0.5rem;
-    display: flex;
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .dropdown-menu td, .dropdown-menu th {
-    min-width: 150px;
-    padding: 0.5rem;
+  min-width: 120px;
+  padding: 0.5rem;
 }
-                                            
+
 /* Navbar */
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 20px;
   background: #fff;
   border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-}
-
-.nav-links li {
-  position: relative;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .nav-links a {
@@ -52,9 +52,7 @@ body {
   color: #333;
   font-weight: 500;
 }
-.nav-links li:hover{
-    border:solid 1px rgb(47, 47, 49);
-}
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -67,59 +65,39 @@ body {
   z-index: 10;
 }
 
-.dropdown-menu li {
-  margin: 5px 0;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
 .icons a {
-  margin-left: 15px;
-  font-size: 18px;
+  margin-left: 10px;
+  font-size: 16px;
   color: #333;
   text-decoration: none;
 }
 
-
-.first {
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
 /* Special Category */
 .special {
-  padding: 50px 80px;
+  padding: 30px 20px;
   background: #fff;
 }
 
- h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
-  text-decoration-line: underline;
- }
- 
+  text-decoration: underline;
+}
+
 /* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr; /* mobile default */
   gap: 15px;
   margin-bottom: 30px;
 }
 
 .product-card {
-  padding: 20px;
+  padding: 15px;
   border-radius: 6px;
   transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
 }
 
 .product-card img {
@@ -127,186 +105,93 @@ body {
   border-radius: 6px;
   margin-bottom: 10px;
 }
-.product-card i{
-  background-color: #a94442;
-  color: white;
-  font-size: 20px;
-  display: none;
-}
-.product-card:hover i{
-  display: block;
-}
-
-.tag {
-  font-size: 14px;
-  color: #a94442;
-  margin-bottom: 5px;
-}
-
-.product-card h3 {
-  font-size: 18px;
-  font-weight: 600;
-}
-.down{
-  display: flex;
-  gap: 50px;
-}
 
 /* Promo Grid */
 .promo-grid {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 15px;
 }
 
 .promo-box {
-  height: 350px;
-  padding: 20px;
+  min-height: 250px;
+  padding: 15px;
   border-radius: 6px;
   text-align: left;
 }
 
-.promo-box h4 {
-  font-size: 24px;
-  margin-bottom: 3px;
-}
-
-.promo-box p {
-  font-size: 14px;
-  line-height: 1.5;
-  padding-top: 20px;
-  color: rgb(102, 45, 4);
-  transition: transform 0.3s ease;
-}
-.promo-box1{
-    width:600px;
-    background: #fae1cf;
-}
-.promo-top{
-    display: flex;
-    gap: 10px;
-}
-.comment{
-    display: block;
-}
-.promo-box2{
-    background: url("./images/cms-banner-1.jpg");
-}
-.promo-box3{
-    background: url("./images/cms-banner-2.jpg");
-}
-.promo-box:hover{
-  transform: scale(1.05);
-}
+/* About Section */
 .about{
-  padding-top:20px ;
+  padding-top:20px;
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
   gap: 10px;
 }
 .about-card{
-  padding: 20px;
+  padding: 15px;
   text-align: center;
-  border-right: 1px solid #ccc;
-}
-.about-card i{
-  font-size: 25px;
-  color: #807f7f;
-  padding-bottom: 4px;
-  transition: transform 0.6s ease;
-}
-.about-card h3{
-  font-weight: bold;
-}
-.about-card p{
-  color: #807f7f;
-}
-.about-card:last-child{
-  border-right: none;
-}
-.about-card i:hover{
-  transform: rotate(360deg);
-}
-hr{
-  width: 90%; 
-  margin:  auto;
-  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-/*featured*/
-.featured{
-  align-items: center;
-}
+/* Featured */
 .featured ul{
   display: flex;
-  gap: 25px;
-  padding: 15px 535px;
-  list-style: none;
-  font-size: 15px;
-}
-.item-card {
-  width: 250px;
-  margin: 20px;
-}
-.image{
-  position: relative;
-  height: 300px;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
-.image:hover {
-  transform: rotateY(180deg);
-}
-.product-item{
-  display: grid;
-  grid-template-columns: 1fr;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   padding: 15px;
-
-}
-.product-item .front, .product-item .back{
-  position: absolute;
-  width: 250px;
-  backface-visibility: hidden;
-}
-.back{
-  transform: rotateY(180deg);
-  display: flex;
-  position: absolute;
-  justify-content: flex-end;
-}
-.social{
-  display: inline-block;
-  position: absolute;
-  background-color: rgb(76, 43, 19);
-}
-.social a{
-  color: #eee;
-  margin-left: 7px;
-}
-h5{
-  font-weight: bold;
+  list-style: none;
+  font-size: 14px;
 }
 
-/*Star rating*/
+.product-item{
+  display: grid;
+  grid-template-columns: 1fr; /* single column on mobile */
+  gap: 15px;
+  padding: 15px;
+}
+.item-card {
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+
+/* Star rating */
 .star-rating {
-  direction: rtl; /* Stars display right-to-left for proper hover effect */
-  font-size: 1.5rem;
-  display: inline-block;
+  font-size: 1.2rem;
 }
 
-.star-rating input {
-  display: none; /* Hide the radio buttons */
+/* ====== Responsive Breakpoints ====== */
+@media (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .promo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.star-rating label {
-  color: #ccc; /* Gray for unselected stars */
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.star-rating label:hover,
-.star-rating label:hover ~ label,
-.star-rating input:checked ~ label {
-  color: gold; 
+@media (min-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .promo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .product-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .featured ul {
+    padding: 15px 200px;
+  }
 }
